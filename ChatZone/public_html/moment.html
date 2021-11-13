@@ -1,0 +1,44 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>ChatZone</title> 
+    
+    <script src="/jquery.js"></script>
+  <script src="/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>    
+    
+<body onload="touxiang();  viewallmoment(); changecolor3();">
+   <div id="column1">
+    <div id="touxiang"> </div>
+    <div id="btnl">
+
+    <button  class="btn" id="btn1" onclick="document.location='home.html'  " >Home</button>
+    <br/><br/>
+    <button  class="btn" id="btn2" onclick="document.location='me.html'" >Me</button>
+    <br/><br/>
+    <button class="btn"  id="btn3" onclick="document.location='moment.html' " >Moment</button>
+    <br/><br/>
+    <button class="btn" id="logout" onclick="logout()" >Logout</button>
+    <br/><br/>
+    <button class="btn" id="btn4" onclick="document.location='help.html' " >Help</button>
+    <br/><br/>
+    </div>
+  </div>
+  <div id="moment">
+	  <div id="momupload">
+    <label for="img">Choose a Photo</label>
+	  <form action="/upload" method="post" enctype="multipart/form-data" id="myMoment" target="nm_iframe">
+             <input type="file" accept="image/*" name="photo" id="img2">
+           </form>
+           <iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe>
+	    <br/><br/><br/><br/>
+	    <textarea id="textarea2"></textarea>
+	    <br/><br/><br/><br/>
+            <button id="submitmom" type="submit" onclick="addmom();viewallmoment();"> Submit </button>
+	  </div>
+	    <div id="displaymom"> </div>
+  </div>
+</body>    
+</html> 

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ChatZone</title> 
+<script src="/jquery.js"></script>
+ <script src="/script.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+</head>
+<body onload="welcome(); touxiang(); changecolor(); ">
+
+
+<div class="row">
+
+  <div id="column1">
+    <div id="touxiang"> </div>
+    <div id="btnl">
+
+    <button  class="btn" id="btn1" onclick="document.location='home.html'  " >Home</button>
+    <br/><br/>
+    <button  class="btn" id="btn2" onclick="document.location='me.html'" >Me</button>
+    <br/><br/>
+    <button class="btn"  id="btn3" onclick="document.location='moment.html' " >Moment</button>
+    <br/><br/>
+    <button class="btn" id="logout" onclick="logout()" >Logout</button>
+    <br/><br/>
+    <button class="btn" id="btn4" onclick="document.location='help.html' " >Help</button>
+    <br/><br/>
+   
+    </div>
+  </div>
+  <div id="column2" >
+    <h2>Friends list</h2>
+
+    <select name="friends" id="friends" onchange="updatefriend()">
+      <option value="selected">---select---</option>
+      <option value="Added friends">Added friends</option>
+      <option value="New friends">New friends</option>
+      <option value="Someone you might know">Someone you might know</option>
+    </select>
+
+   
+    <div id="searchcircle">
+        <input id="searchinput" type="text" class="input" name="txt" oninput="search()">
+        
+    </div>
+    <i id="searchtext">search...</i>
+    <div id="friendsl">
+	    What do you want to do today?
+    </div>
+  </div>
+  
+  <div id="column3">
+  
+
+
+
+    <h2 id="identify"> </h2>
+    
+
+       <input id="textarea" placeholder="Text goes here"></input>
+    
+    
+   
+    <span id="send"> 
+	  <button  id="btn5" onclick="sendMessage()" >Send</button>
+	       <br/><br/>
+          <div id="emoji">
+    <button id="emojibtn" onclick="showemoji()">Emojis</button>
+
+    <div id="drawer" class="emoji-drawer hidden"> 
+      <div class="emoji" onclick="addEmoji(this.innerHTML)">🤙</div>
+      <div class="emoji" onclick="addEmoji(this.innerHTML)">🤷</div>
+      <div class="emoji" onclick="addEmoji(this.innerHTML)">🙃</div>
+      <div class="emoji" onclick="addEmoji(this.innerHTML)">😭</div>
+      <div class="emoji" onclick="addEmoji(this.innerHTML)">😍</div>
+      <div class="emoji" onclick="addEmoji(this.innerHTML)">🖕</div>
+      <div class="emoji" onclick="addEmoji(this.innerHTML)">💔</div>
+      <div class="emoji" onclick="addEmoji(this.innerHTML)">🙃</div>
+      <div class="emoji" onclick="addEmoji(this.innerHTML)">🐢</div>
+      <div class="emoji" onclick="addEmoji(this.innerHTML)">👌</div>
+    </div></div>
+    </span>
+    
+    <div id="chats">
+		    
+  </div>
+  
+
+  
+
+    
+  <div id="column4">
+	  
+    <h2>Welcome!</h2>
+    
+  </div>
+ 
+</div>
+
+</body>
+</html>

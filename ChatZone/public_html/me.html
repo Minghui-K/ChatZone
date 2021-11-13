@@ -1,0 +1,58 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>ChatZone</title>    
+    <script src="/jquery.js"></script>
+ <script src="/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>    
+    
+<body onload="info(); touxiang();changecolor2();">
+   <div id="column1">
+    <div id="touxiang"> </div>
+    <div id="btnl">
+    <button  class="btn" id="btn1" onclick="document.location='home.html'  " >Home</button>
+    <br/><br/>
+    <button  class="btn" id="btn2" onclick="document.location='me.html'" >Me</button>
+    <br/><br/>
+    <button class="btn"  id="btn3" onclick="document.location='moment.html' " >Moment</button>
+    <br/><br/>
+    <button class="btn" id="logout" onclick="logout()" >Logout</button>
+    <br/><br/>
+    <button class="btn" id="btn4" onclick="document.location='help.html' " >Help</button>
+    <br/><br/>
+  </div>
+  <div id="information">
+      <label for="gender">Gender: </label>
+      <select name="Gender" id="gender">
+         <option value="Secret">Secret</option>
+         <option value="Boy">Boy</option>
+         <option value="Girl">Girl</option>
+      </select>
+      <br/><br/><br/><br/>
+       <label for="birthday">Birthday: </label>
+       <input type="date" id="birthday" name="birthday">
+       <br/><br/><br/><br/>
+       <label for="job">Job: </label>
+       <input type="text" id="job" name="job">
+       <br/><br/><br/><br/>
+       <label for="ps">Personal Signature: </label>
+       <input type="text" id="ps" name="ps">
+       <br/><br/><br/><br/>
+       <label for="favcolor">Favorite Color</label>
+       <input type="color" id="favcolor" name="favcolor">
+       <br/><br/><br/><br/>
+       <label for="img">Head portrait</label>
+      <form action="/upload" method="post" enctype="multipart/form-data" id="myForm" target="nm_iframe">
+         <input type="file" accept="image/*" name="photo" id="img" required>
+      </form>
+      <iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe>
+       <br/><br/><br/><br/>
+       <button id="submitinfo" type="submit" onclick="addinfo();info();touxiang();changecolor2();"> Save </button>
+  </div>
+  <div id="information2"></div>
+
+
+</body>    
+</html> 
